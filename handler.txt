@@ -1,0 +1,7 @@
+shared state:
+   jb ap na koi cheez ,multiple handler k across shared krna ho tb ap ye concept shared state k use krta 
+   .app_date(web::Data::new(appState{
+    anythings:type,
+   })) phr ap us ko enject kr do main function mai,exactley us fn k ander jo ap k main function ha ya main entry point .phr ap us ko hander k ander ap recieve kr skt ha.
+   data:Web::Data<appState> aur us k ap borrowing kr skta ha,like 
+   &data aur use kre ,jo manupulation krni ha.
