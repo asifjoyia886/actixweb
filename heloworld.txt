@@ -1,0 +1,28 @@
+Server creation:
+          hum na ik server create krna jo keya kre ga ,k agr koi request us k pass ati ha to wo ik response generate kre ga.to wasa scratch s 
+          server ko create krna bht mushkil ap kr skta ha lekn thora mushkil ha to ,actix web hmai assa tool deta jo hmara help krta ha us kam ko 
+          anjam deta ha.
+            use Actix_web::
+                  us crate k ander kafi sara tools jasa App,HttpResponse,HttpServer,Responder,get,post,patch,delete method ha ya tools jo ap 
+                  ap k help kre chezo build krna .
+                  App:
+                    us mai hum log apna handler aur route define krt ha,aur her request p ye  ik new instance generate hoti.jo basicaly us ko ultra
+                    fast bnanta ha  jb bhe koi instance bnae jati ha to new() keyword use hota aur sath function .service s attach krta hai.
+                  bind:
+                      hum log jo server ha ,us ko kehta ha k ye hmara local machine p chala aur jo bhe port number likha us p ,request ur response 
+                      ko deal kr ska.
+
+                  run():
+                        run func us ko run krta ha  aur .await s wait krta ha ta k request k intizar kre aur ae to response jo ha wo generate kr saka
+app k sath hum sara cheze use krta ha ,like service method ,route jb ap na macro use krna ha to ap service(hanler_name) to ap handler k name jo bhe 
+ap ka funciton us ko use kr lo ,
+
+  std::io::Result<()> : hma rust mai func k return type define krta ha ,jaha  p T or Err return ho ga ,to hum log main function k return tye defien 
+krte hai..
+
+  .configure() : jaha p hum log module ko jo bhe routes ya jo cheze hum log inlcude krta ha mai entry point k ander.
+  mode alpha; yaha hum log pora module ko import kr rha ha us k baad nech us k main regiter ko call kr rha ha ap  k ander.
+  mod routes pub use routes::init;
+   yaha hum log keya kr rha  mod ko ik file mai la rha sath,us route k andr init func jaha route k register keye call kr rha .
+HttpResponse::method kafi 200,201,401 ,404 500 hundred zeyda ter use hota ha ..
+scope: app k ander grup krna route to hum log use krta ha ,ye ik brhi efficent approach ..
